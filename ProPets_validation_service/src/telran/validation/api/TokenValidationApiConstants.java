@@ -1,6 +1,5 @@
 package telran.validation.api;
 
-
 public interface TokenValidationApiConstants {
 	
 	String CREATE_BY_ENTITY = 				"/validation/en/v1/create/entity";

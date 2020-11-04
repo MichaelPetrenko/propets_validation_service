@@ -66,8 +66,13 @@ public class JWTTokenServiceImpl implements ITokenService{
 
 	@Override
 	public String[] decompileToken(String token) {
-		Jws<Claims> jws = Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
-		Claims claims = jws.getBody();
+		Claims claims;
+		try {
+			Jws<Claims> jws = Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
+			claims = jws.getBody();
+		} catch (Exception e) {
+			throw new NotExistsException();
+		}
 		String[] res = new String[4];
 		res[0] = claims.get("login").toString();
 		res[1] = claims.get("password").toString();
