@@ -6,6 +6,7 @@ import java.util.Base64;
 import java.util.HashSet;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
@@ -18,6 +19,7 @@ import telran.validation.domain.entities.AccountEntity;
 import telran.validation.domain.entities.AccountingRoles;
 import telran.validation.service.interfaces.ITokenService;
 
+@Service
 public class JWTTokenServiceImpl implements ITokenService{
 	
 	@Autowired
