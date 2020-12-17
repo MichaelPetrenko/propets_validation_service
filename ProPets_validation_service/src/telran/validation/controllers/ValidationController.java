@@ -51,11 +51,4 @@ public class ValidationController {
 	String[] validateAuth(@RequestBody String token) {
 		return tokenService.validateAuth(token);
 	}
-	
-	// "/wakeup"
-	@GetMapping(value = TokenValidationApiConstants.WAKEUP)
-	void wakeUp() {
-		return;
-	}
-	
 }
