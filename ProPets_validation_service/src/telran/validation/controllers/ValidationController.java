@@ -3,6 +3,7 @@ package telran.validation.controllers;
 import java.util.HashSet;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -49,6 +50,12 @@ public class ValidationController {
 	@PostMapping(value = TokenValidationApiConstants.VALIDATE_AUTH)
 	String[] validateAuth(@RequestBody String token) {
 		return tokenService.validateAuth(token);
+	}
+	
+	// "/wakeup"
+	@GetMapping(value = TokenValidationApiConstants.WAKEUP)
+	void wakeUp() {
+		return;
 	}
 	
 }

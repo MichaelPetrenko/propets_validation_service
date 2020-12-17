@@ -7,5 +7,6 @@ public interface TokenValidationApiConstants {
 	String VALIDATE_TOKEN = 				"/validation/en/v1/validate";
 	String VALIDATE_AUTH = 					"/validation/en/v1/auth";
 	String DECOMPILE_TOKEN = 				"/validation/en/v1/decompile";
+	String WAKEUP = 						"/wakeup";
 
 }
